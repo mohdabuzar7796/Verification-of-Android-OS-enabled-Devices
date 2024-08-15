@@ -14,12 +14,43 @@
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
+        margin: 5px;
+      }
+      .device-list,
+      .test-case-list {
+        margin-bottom: 20px;
       }
     </style>
   </head>
   <body>
-    <form action="/results" method="get">
-      <button class="button">Run Test Cases</button>
-    </form>
+    <h1>Connected Devices</h1>
+    <div class="device-list">
+      <% if (devices.length === 0) { %>
+      <p>No devices connected.</p>
+      <% } else { %>
+      <ul>
+        <% devices.forEach(device => { %>
+        <li><%= device.id %></li>
+        <% }); %>
+      </ul>
+      <% } %>
+    </div>
+
+    <h1>Test Cases</h1>
+    <div class="test-case-list">
+      <form action="/results" method="get">
+        <button class="button">Run All Test Cases</button>
+      </form>
+
+      <% testCases.forEach(testCase => { %>
+      <form
+        action="/run-test/<%= testCase %>"
+        method="get"
+        style="display: inline"
+      >
+        <button class="button"><%= testCase %></button>
+      </form>
+      <% }); %>
+    </div>
   </body>
 </html>

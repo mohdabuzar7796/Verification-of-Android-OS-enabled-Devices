@@ -30,7 +30,6 @@ function log(message) {
     }
   });
 }
-
 // Test cases
 async function testListDevices() {
   try {
@@ -40,8 +39,10 @@ async function testListDevices() {
     }
 
     console.log("Connected devices:", devices);
-    devices.forEach((device) => {
+
+    await devices.forEach((device) => {
       passed++;
+
       testResults.push({
         name: "List Devices",
         status: "passed",
@@ -302,9 +303,6 @@ async function runTestCases() {
 }
 
 // Route to display test results
-app.get("/", (req, res) => {
-  res.render("Home");
-});
 
 app.get("/results", async (req, res) => {
   await runTestCases();
@@ -315,6 +313,69 @@ app.get("/results", async (req, res) => {
     testResults,
   });
 });
+
+app.get("/", async (req, res) => {
+  try {
+    const devices = await client.listDevices();
+    const testCases = [
+      "List Devices",
+      "Get Device Properties",
+      "Install APK",
+      "Fetch Installed Packages",
+      "Take Screenshot",
+      "Send Text to Device",
+      "Scroll Down",
+    ];
+
+    res.render("home", {
+      devices,
+      testCases,
+    });
+  } catch (err) {
+    console.error("Error getting device or test case info:", err.message);
+    res.status(500).send("Error fetching device or test case information.");
+  }
+});
+
+// Route to run specific test case
+app.get("/run-test/:testName", async (req, res) => {
+  const testName = req.params.testName;
+
+  // Define a mapping from test names to test functions
+  const testFunctions = {
+    "List Devices": testListDevices,
+    "Get Device Properties": testGetDeviceProperties,
+    "Install APK": testInstallAPK,
+    "Fetch Installed Packages": testFetchInstalledPackages,
+    Screenshot: testTakeScreenshot,
+    "Send-Text-to-Device": () => testSendTextToDevice("Hello, World!"),
+    "Scroll Down": testScrollDown,
+  };
+
+  try {
+    if (testFunctions[testName]) {
+      await testFunctions[testName]();
+      res.status(200);
+      // res.redirect("/results");
+    } else {
+      res.status(400).send("Invalid test case.");
+    }
+  } catch (err) {
+    console.error("Error running test case:", err.message);
+    res.status(500).send("Error running test case.");
+  }
+});
+
+// Route to run all test cases
+// app.get("run-test/all", async (req, res) => {
+//   try {
+//     await runTestCases();
+//     res.redirect("/results");
+//   } catch (err) {
+//     console.error("Error running all test cases:", err.message);
+//     res.status(500).send("Error running all test cases.");
+//   }
+// });
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
