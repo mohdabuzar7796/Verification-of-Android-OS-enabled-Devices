@@ -38,14 +38,17 @@ async function testListDevices() {
     if (devices.length === 0) {
       throw new Error("No devices connected");
     }
+
     console.log("Connected devices:", devices);
-    passed++;
-    testResults.push({
-      name: "List Devices",
-      status: "passed",
-      message: "Devices listed successfully",
+    devices.forEach((device) => {
+      passed++;
+      testResults.push({
+        name: "List Devices",
+        status: "passed",
+        message: `Device ${device.id} listed successfully`,
+      });
+      log(`${Date()} PASS: Device ${device.id} listed successfully`);
     });
-    log(Date() + " PASS: Devices listed successfully");
   } catch (err) {
     console.error("Error occurred:", err);
     failed++;
@@ -54,7 +57,7 @@ async function testListDevices() {
       status: "failed",
       message: "Error listing devices: " + err.message,
     });
-    log(Date() + " FAIL: Error listing devices: " + err.message);
+    log(`${Date()} FAIL: Error listing devices: ${err.message}`);
   }
 }
 
@@ -73,14 +76,18 @@ async function testGetDeviceProperties() {
         androidVersion: properties["ro.build.version.release"],
         sdkVersion: properties["ro.build.version.sdk"],
       };
-      console.log(details);
+      console.log(`Device ${device.id} properties:`, details);
       passed++;
       testResults.push({
         name: "Get Device Properties",
         status: "passed",
-        message: "Device properties fetched successfully",
+        message: `Device properties fetched successfully for device ${device.id}`,
       });
-      log(Date() + " PASS: Device properties fetched successfully");
+      log(
+        `${Date()} PASS: Device properties fetched successfully for device ${
+          device.id
+        }`
+      );
     }
   } catch (err) {
     console.error("Error getting device properties:", err.message);
@@ -90,7 +97,7 @@ async function testGetDeviceProperties() {
       status: "failed",
       message: "Error getting device properties: " + err.message,
     });
-    log(Date() + " FAIL: Error getting device properties: " + err.message);
+    log(`${Date()} FAIL: Error getting device properties: ${err.message}`);
   }
 }
 
@@ -102,15 +109,18 @@ async function testInstallAPK() {
     }
 
     for (const device of devices) {
-      await client.install(device.id, path.join(__dirname, "app.apk"));
+      await client.install(
+        device.id,
+        path.join(__dirname, "APKPure_v3.20.16_apkpure.com.apk") // Corrected path
+      );
       console.log(`Successfully installed APK on device ${device.id}`);
       passed++;
       testResults.push({
         name: "Install APK",
         status: "passed",
-        message: "APK installed successfully on device " + device.id,
+        message: `APK installed successfully on device ${device.id}`,
       });
-      log(Date() + " PASS: APK installed successfully on device " + device.id);
+      log(`${Date()} PASS: APK installed successfully on device ${device.id}`);
     }
   } catch (err) {
     console.error("Failed to install APK:", err.message);
@@ -120,7 +130,7 @@ async function testInstallAPK() {
       status: "failed",
       message: "Failed to install APK: " + err.message,
     });
-    log(Date() + " FAIL: Failed to install APK: " + err.message);
+    log(`${Date()} FAIL: Failed to install APK: ${err.message}`);
   }
 }
 
@@ -138,10 +148,13 @@ async function testFetchInstalledPackages() {
       testResults.push({
         name: "Fetch Installed Packages",
         status: "passed",
-        message:
-          "Installed packages fetched successfully for device " + device.id,
+        message: `Installed packages fetched successfully for device ${device.id}`,
       });
-      log(Date() + " PASS: Installed packages fetched successfully for device " + device.id);
+      log(
+        `${Date()} PASS: Installed packages fetched successfully for device ${
+          device.id
+        }`
+      );
     }
   } catch (err) {
     console.error("Failed to fetch installed packages:", err.message);
@@ -151,7 +164,7 @@ async function testFetchInstalledPackages() {
       status: "failed",
       message: "Failed to fetch installed packages: " + err.message,
     });
-    log(Date() + " FAIL: Failed to fetch installed packages: " + err.message);
+    log(`${Date()} FAIL: Failed to fetch installed packages: ${err.message}`);
   }
 }
 
@@ -162,24 +175,30 @@ async function testTakeScreenshot() {
       throw new Error("No devices connected");
     }
 
-    const deviceId = devices[0].id;
-    const screenshot = await client.shell(deviceId, "screencap -p");
-    const chunks = [];
+    for (const device of devices) {
+      const screenshot = await client.shell(device.id, "screencap -p");
+      const chunks = [];
 
-    screenshot.on("data", (chunk) => chunks.push(chunk));
-    screenshot.on("end", () => {
-      const buffer = Buffer.concat(chunks);
-      const screenshotPath = path.join(__dirname, "screenshot.png");
-      fs.writeFileSync(screenshotPath, buffer);
-      console.log("Screenshot saved as screenshot.png");
-      passed++;
-      testResults.push({
-        name: "Take Screenshot",
-        status: "passed",
-        message: "Screenshot taken successfully on device " + deviceId,
+      screenshot.on("data", (chunk) => chunks.push(chunk));
+      screenshot.on("end", () => {
+        const buffer = Buffer.concat(chunks);
+        const screenshotPath = path.join(
+          __dirname,
+          `screenshot_${device.id}.png`
+        );
+        fs.writeFileSync(screenshotPath, buffer);
+        console.log(`Screenshot saved as screenshot_${device.id}.png`);
+        passed++;
+        testResults.push({
+          name: "Take Screenshot",
+          status: "passed",
+          message: `Screenshot taken successfully on device ${device.id}`,
+        });
+        log(
+          `${Date()} PASS: Screenshot taken successfully on device ${device.id}`
+        );
       });
-      log(Date() + " PASS: Screenshot taken successfully on device " + deviceId);
-    });
+    }
   } catch (err) {
     console.error("Failed to take screenshot:", err.message);
     failed++;
@@ -188,7 +207,7 @@ async function testTakeScreenshot() {
       status: "failed",
       message: "Failed to take screenshot: " + err.message,
     });
-    log(Date() + " FAIL: Failed to take screenshot: " + err.message);
+    log(`${Date()} FAIL: Failed to take screenshot: ${err.message}`);
   }
 }
 
@@ -199,17 +218,18 @@ async function testSendTextToDevice(text) {
       throw new Error("No devices connected");
     }
 
-    const deviceId = devices[0].id;
-    const encodedText = text.replace(/ /g, "%s");
-    await client.shell(deviceId, `input text "${encodedText}"`);
-    console.log(`Text "${text}" sent to device.`);
-    passed++;
-    testResults.push({
-      name: "Send Text to Device",
-      status: "passed",
-      message: "Text sent to device successfully",
-    });
-    log(Date() + " PASS: Text sent to device successfully");
+    for (const device of devices) {
+      const encodedText = text.replace(/ /g, "%s");
+      await client.shell(device.id, `input text "${encodedText}"`);
+      console.log(`Text "${text}" sent to device ${device.id}.`);
+      passed++;
+      testResults.push({
+        name: "Send Text to Device",
+        status: "passed",
+        message: `Text sent to device ${device.id} successfully`,
+      });
+      log(`${Date()} PASS: Text sent to device ${device.id} successfully`);
+    }
   } catch (err) {
     console.error("Failed to send text to device:", err.message);
     failed++;
@@ -218,7 +238,7 @@ async function testSendTextToDevice(text) {
       status: "failed",
       message: "Failed to send text to device: " + err.message,
     });
-    log(Date() + " FAIL: Failed to send text to device: " + err.message);
+    log(`${Date()} FAIL: Failed to send text to device: ${err.message}`);
   }
 }
 
@@ -229,26 +249,30 @@ async function testScrollDown() {
       throw new Error("No devices connected");
     }
 
-    const deviceId = devices[0].id;
-    const startX = 500;
-    const startY = 1000;
-    const endX = 500;
-    const endY = 200;
-    const duration = 500;
+    for (const device of devices) {
+      const startX = 500;
+      const startY = 1000;
+      const endX = 500;
+      const endY = 200;
+      const duration = 500;
 
-    await client.shell(
-      deviceId,
-      `input swipe ${startX} ${startY} ${endX} ${endY} ${duration}`
-    );
-    console.log("Scroll down action performed on device");
-    passed++;
-    testResults.push({
-      name: "Scroll Down",
-      status: "passed",
-      message:
-        "Scroll down action performed successfully on device " + deviceId,
-    });
-    log(Date() + " PASS: Scroll down action performed successfully on device " + deviceId);
+      await client.shell(
+        device.id,
+        `input swipe ${startX} ${startY} ${endX} ${endY} ${duration}`
+      );
+      console.log("Scroll down action performed on device", device.id);
+      passed++;
+      testResults.push({
+        name: "Scroll Down",
+        status: "passed",
+        message: `Scroll down action performed successfully on device ${device.id}`,
+      });
+      log(
+        `${Date()} PASS: Scroll down action performed successfully on device ${
+          device.id
+        }`
+      );
+    }
   } catch (err) {
     console.error("Failed to scroll down on device:", err.message);
     failed++;
@@ -257,7 +281,7 @@ async function testScrollDown() {
       status: "failed",
       message: "Failed to scroll down on device: " + err.message,
     });
-    log(Date() + " FAIL: Failed to scroll down on device: " + err.message);
+    log(`${Date()} FAIL: Failed to scroll down on device: ${err.message}`);
   }
 }
 
@@ -279,7 +303,7 @@ async function runTestCases() {
 
 // Route to display test results
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.render("Home");
 });
 
 app.get("/results", async (req, res) => {

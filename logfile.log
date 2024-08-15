@@ -168,3 +168,191 @@ Fri Aug 16 2024 00:22:13 GMT+0530 (India Standard Time) PASS: Installed packages
 Fri Aug 16 2024 00:22:14 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
 Fri Aug 16 2024 00:22:14 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
 Fri Aug 16 2024 00:22:14 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:24:59 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:24:59 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:24:59 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\app.apk'
+Fri Aug 16 2024 00:24:59 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:24:59 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
+Fri Aug 16 2024 00:24:59 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:25:00 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:25:10 GMT+0530 (India Standard Time) FAIL: Error listing devices: No devices connected
+Fri Aug 16 2024 00:25:10 GMT+0530 (India Standard Time) FAIL: Error getting device properties: No devices connected
+Fri Aug 16 2024 00:25:10 GMT+0530 (India Standard Time) FAIL: Failed to install APK: No devices connected
+Fri Aug 16 2024 00:25:10 GMT+0530 (India Standard Time) FAIL: Failed to fetch installed packages: No devices connected
+Fri Aug 16 2024 00:25:10 GMT+0530 (India Standard Time) FAIL: Failed to take screenshot: No devices connected
+Fri Aug 16 2024 00:25:10 GMT+0530 (India Standard Time) FAIL: Failed to send text to device: No devices connected
+Fri Aug 16 2024 00:25:10 GMT+0530 (India Standard Time) FAIL: Failed to scroll down on device: No devices connected
+Fri Aug 16 2024 00:25:15 GMT+0530 (India Standard Time) FAIL: Error listing devices: No devices connected
+Fri Aug 16 2024 00:25:15 GMT+0530 (India Standard Time) FAIL: Error getting device properties: No devices connected
+Fri Aug 16 2024 00:25:15 GMT+0530 (India Standard Time) FAIL: Failed to install APK: No devices connected
+Fri Aug 16 2024 00:25:15 GMT+0530 (India Standard Time) FAIL: Failed to fetch installed packages: No devices connected
+Fri Aug 16 2024 00:25:15 GMT+0530 (India Standard Time) FAIL: Failed to take screenshot: No devices connected
+Fri Aug 16 2024 00:25:15 GMT+0530 (India Standard Time) FAIL: Failed to send text to device: No devices connected
+Fri Aug 16 2024 00:25:15 GMT+0530 (India Standard Time) FAIL: Failed to scroll down on device: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Error listing devices: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Error getting device properties: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to install APK: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to fetch installed packages: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to take screenshot: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to send text to device: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to scroll down on device: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Error listing devices: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Error getting device properties: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to install APK: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to fetch installed packages: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to take screenshot: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to send text to device: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to scroll down on device: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Error listing devices: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Error getting device properties: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to install APK: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to fetch installed packages: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to take screenshot: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to send text to device: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to scroll down on device: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Error listing devices: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Error getting device properties: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to install APK: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to fetch installed packages: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to take screenshot: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to send text to device: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to scroll down on device: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Error listing devices: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Error getting device properties: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to install APK: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to fetch installed packages: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to take screenshot: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to send text to device: No devices connected
+Fri Aug 16 2024 00:25:16 GMT+0530 (India Standard Time) FAIL: Failed to scroll down on device: No devices connected
+Fri Aug 16 2024 00:25:39 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:25:39 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:25:39 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\app.apk'
+Fri Aug 16 2024 00:25:40 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:25:40 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
+Fri Aug 16 2024 00:25:40 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:25:40 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:29:46 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:29:46 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:29:47 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\app.apk'
+Fri Aug 16 2024 00:29:47 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:29:47 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
+Fri Aug 16 2024 00:29:47 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:29:47 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:00 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:30:01 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:30:01 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\app.apk'
+Fri Aug 16 2024 00:30:01 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:01 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
+Fri Aug 16 2024 00:30:01 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:01 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:06 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:30:06 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:30:06 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\app.apk'
+Fri Aug 16 2024 00:30:06 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:06 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
+Fri Aug 16 2024 00:30:06 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:30:07 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:07 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:30:07 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:07 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\app.apk'
+Fri Aug 16 2024 00:30:07 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:07 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
+Fri Aug 16 2024 00:30:07 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:07 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:30:08 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:08 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:30:08 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:30:08 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\app.apk'
+Fri Aug 16 2024 00:30:08 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:30:09 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:30:09 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\app.apk'
+Fri Aug 16 2024 00:30:09 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:30:09 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:09 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\app.apk'
+Fri Aug 16 2024 00:30:09 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
+Fri Aug 16 2024 00:30:09 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:09 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:09 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:09 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
+Fri Aug 16 2024 00:30:09 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:09 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
+Fri Aug 16 2024 00:30:09 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:09 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:09 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:09 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:29 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:30:30 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:30:30 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\app.apk'
+Fri Aug 16 2024 00:30:30 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:30 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
+Fri Aug 16 2024 00:30:30 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:30:30 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:32:42 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:32:43 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:32:43 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\app.apk'
+Fri Aug 16 2024 00:32:43 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:32:43 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
+Fri Aug 16 2024 00:32:43 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:32:43 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:35:29 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:35:29 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:35:29 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:35:29 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\app.apk'
+Fri Aug 16 2024 00:35:29 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:35:30 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device ZA222LZLDN
+Fri Aug 16 2024 00:35:30 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
+Fri Aug 16 2024 00:35:30 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:35:30 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:36:04 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:36:04 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:36:04 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:36:04 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\app.apk'
+Fri Aug 16 2024 00:36:04 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:36:04 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device ZA222LZLDN
+Fri Aug 16 2024 00:36:04 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
+Fri Aug 16 2024 00:36:04 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:36:04 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:38:16 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:38:16 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:38:16 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:38:16 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\C:UsersHPDownloadsAPKPure_v3.20.16_apkpure.com.apk'
+Fri Aug 16 2024 00:38:16 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:38:16 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device ZA222LZLDN
+Fri Aug 16 2024 00:38:16 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
+Fri Aug 16 2024 00:38:16 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:38:17 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:39:24 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:39:24 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:39:24 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\C:UsersHPDownloadsAPKPure_v3.20.16_apkpure.com.apk'
+Fri Aug 16 2024 00:39:24 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:39:24 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
+Fri Aug 16 2024 00:39:24 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:39:26 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:44:16 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:44:16 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:44:17 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\C:UsersHPDownloadsAPKPure_v3.20.16_apkpure.com.apk'
+Fri Aug 16 2024 00:44:17 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:44:17 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
+Fri Aug 16 2024 00:44:17 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:44:17 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:45:56 GMT+0530 (India Standard Time) PASS: Device BAYHQOH6SKKBVSNV listed successfully
+Fri Aug 16 2024 00:45:56 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:45:56 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\APKPure_v3.20.16_apkpure.com.apk'
+Fri Aug 16 2024 00:45:56 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:45:56 GMT+0530 (India Standard Time) PASS: Text sent to device BAYHQOH6SKKBVSNV successfully
+Fri Aug 16 2024 00:45:56 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:45:56 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:50:08 GMT+0530 (India Standard Time) PASS: Device BAYHQOH6SKKBVSNV listed successfully
+Fri Aug 16 2024 00:50:08 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:50:08 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\APKPure_v3.20.16_apkpure.com.apk'
+Fri Aug 16 2024 00:50:08 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:50:08 GMT+0530 (India Standard Time) PASS: Text sent to device BAYHQOH6SKKBVSNV successfully
+Fri Aug 16 2024 00:50:08 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:50:08 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:51:22 GMT+0530 (India Standard Time) PASS: Device BAYHQOH6SKKBVSNV listed successfully
+Fri Aug 16 2024 00:51:23 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:51:23 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\APKPure_v3.20.16_apkpure.com.apk'
+Fri Aug 16 2024 00:51:23 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:51:23 GMT+0530 (India Standard Time) PASS: Text sent to device BAYHQOH6SKKBVSNV successfully
+Fri Aug 16 2024 00:51:23 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:51:23 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
