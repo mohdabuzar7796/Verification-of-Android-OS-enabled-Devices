@@ -7,16 +7,34 @@
     "start": "nodemon server.js",
     "test": "jest"
   },
+  "jest": {
+    "reporters": [
+      "default",
+      [
+        "jest-html-reporter",
+        {
+          "pageTitle": "Test Report",
+          "outputPath": "public/test-report.html"
+        }
+      ]
+    ]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@wdio/cli": "^8.40.2",
     "adbkit": "^2.11.1",
     "chai": "^5.1.1",
+    "chart.js": "^4.4.3",
+    "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "fs-extra": "^11.2.0",
+    "jest-html-reporter": "^3.10.2",
     "mocha": "^10.4.0",
     "nodemon": "^3.1.4",
-    "tesseract.js": "^4.1.1",
+    "tesseract.js": "^4.1.4",
+    "webdriverio": "^8.40.2",
     "xlsx": "^0.18.5",
     "xml2js": "^0.6.2"
   },

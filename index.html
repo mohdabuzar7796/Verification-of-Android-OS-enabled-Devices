@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .results {
+            margin-top: 20px;
+        }
+        .summary {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .chart {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Results</h1>
+    <button id="runTests">Run Tests</button>
+    <div class="results">
+        <div class="summary">
+            <p>Total Passed: <span id="passed">0</span></p>
+            <p>Total Failed: <span id="failed">0</span></p>
+        </div>
+        <div class="chart">
+            <canvas id="resultsChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.getElementById('runTests').addEventListener('click', async () => {
+            const response = await fetch('/test');
+            const data = await response.json();
+            document.getElementById('passed').textContent = data.passed;
+            document.getElementById('failed').textContent = data.failed;
+
+            // Render chart
+            const ctx = document.getElementById('resultsChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Passed', 'Failed'],
+                    datasets: [{
+                        data: [data.passed, data.failed],
+                        backgroundColor: ['#4caf50', '#f44336']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (context.parsed) {
+                                        label += `: ${context.parsed.toFixed(2)}`;
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

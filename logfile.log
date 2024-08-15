@@ -1,0 +1,170 @@
+Sun Aug 11 2024 14:36:47 GMT+0530 (India Standard Time) PASS: {"model":"CPH2423","brand":"OnePlus","androidVersion":"14","sdkVersion":"34"}
+Sun Aug 11 2024 14:37:59 GMT+0530 (India Standard Time) FAILED: No Device connected
+Sun Aug 11 2024 14:38:11 GMT+0530 (India Standard Time) PASS: {"model":"CPH2423","brand":"OnePlus","androidVersion":"14","sdkVersion":"34"}
+Sun Aug 11 2024 14:42:12 GMT+0530 (India Standard Time) PASS: {"model":"CPH2423","brand":"OnePlus","androidVersion":"14","sdkVersion":"34"}
+Sun Aug 11 2024 14:42:16 GMT+0530 (India Standard Time)FAILApp is Successfully installed on BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 14:47:13 GMT+0530 (India Standard Time)PASSSuccessfully BAYHQOH6SKKBVSNV is on Home Screen
+Sun Aug 11 2024 14:49:38 GMT+0530 (India Standard Time)PASS  Installed packages on device BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 14:52:27 GMT+0530 (India Standard Time)PASSScreenshot is successfully taken on BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 14:54:27 GMT+0530 (India Standard Time)PASS  Hello World is sent to device BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 14:54:29 GMT+0530 (India Standard Time)PASS  Screenshot is successfully taken on BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 14:54:44 GMT+0530 (India Standard Time)PASS  Hello World is sent to device BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 14:54:44 GMT+0530 (India Standard Time)PASS  Screenshot is successfully taken on BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:44:05 GMT+0530 (India Standard Time)PASS  Hello World is sent to device BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:44:05 GMT+0530 (India Standard Time)PASS  Installed packages on device BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:44:05 GMT+0530 (India Standard Time) PASS: {"model":"CPH2423","brand":"OnePlus","androidVersion":"14","sdkVersion":"34"}
+Sun Aug 11 2024 16:44:06 GMT+0530 (India Standard Time)PASS  Screenshot is successfully taken on BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:44:10 GMT+0530 (India Standard Time)PASSApp is Successfully installed on BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:45:15 GMT+0530 (India Standard Time)PASS  Hello World is sent to device BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:45:15 GMT+0530 (India Standard Time)PASS  Installed packages on device BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:45:15 GMT+0530 (India Standard Time) PASS: {"model":"CPH2423","brand":"OnePlus","androidVersion":"14","sdkVersion":"34"}
+Sun Aug 11 2024 16:45:18 GMT+0530 (India Standard Time)PASS  Screenshot is successfully taken on BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:45:26 GMT+0530 (India Standard Time)PASSApp is Successfully installed on BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:45:34 GMT+0530 (India Standard Time)PASS  Hello World is sent to device BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:45:34 GMT+0530 (India Standard Time)PASS  Installed packages on device BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:45:34 GMT+0530 (India Standard Time) PASS: {"model":"CPH2423","brand":"OnePlus","androidVersion":"14","sdkVersion":"34"}
+Sun Aug 11 2024 16:45:35 GMT+0530 (India Standard Time)PASS  Screenshot is successfully taken on BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:45:42 GMT+0530 (India Standard Time)PASSApp is Successfully installed on BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:46:33 GMT+0530 (India Standard Time)PASS  Hello World is sent to device BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:46:33 GMT+0530 (India Standard Time) PASS: {"model":"CPH2423","brand":"OnePlus","androidVersion":"14","sdkVersion":"34"}
+Sun Aug 11 2024 16:46:33 GMT+0530 (India Standard Time)PASS  Installed packages on device BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:46:33 GMT+0530 (India Standard Time)PASS  Screenshot is successfully taken on BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:46:40 GMT+0530 (India Standard Time)PASSApp is Successfully installed on BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:50:56 GMT+0530 (India Standard Time) PASS: Text "Hello World" sent to device BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:50:56 GMT+0530 (India Standard Time) PASS: Scroll down action performed on device BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:50:56 GMT+0530 (India Standard Time) PASS: {"model":"CPH2423","brand":"OnePlus","androidVersion":"14","sdkVersion":"34"}
+Sun Aug 11 2024 16:50:56 GMT+0530 (India Standard Time) PASS: Installed packages on device BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:50:59 GMT+0530 (India Standard Time) PASS: Screenshot successfully taken on BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:51:01 GMT+0530 (India Standard Time) PASS: App successfully installed on BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:53:14 GMT+0530 (India Standard Time) SUMMARY: PASSED -> 0, FAILED -> 6
+Sun Aug 11 2024 16:53:14 GMT+0530 (India Standard Time) PASS: Scroll down action performed on device BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:53:14 GMT+0530 (India Standard Time) PASS: Text "Hello World" sent to device BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:53:14 GMT+0530 (India Standard Time) PASS: {"model":"CPH2423","brand":"OnePlus","androidVersion":"14","sdkVersion":"34"}
+Sun Aug 11 2024 16:53:14 GMT+0530 (India Standard Time) PASS: Installed packages on device BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:53:14 GMT+0530 (India Standard Time) PASS: Screenshot successfully taken on BAYHQOH6SKKBVSNV
+Sun Aug 11 2024 16:53:17 GMT+0530 (India Standard Time) PASS: App successfully installed on BAYHQOH6SKKBVSNV
+Thu Aug 15 2024 23:02:34 GMT+0530 (India Standard Time) FAIL: No devices connected
+Thu Aug 15 2024 23:02:35 GMT+0530 (India Standard Time) FAIL: Screenshot not taken: Command failed: adb start-server
+* daemon not running; starting now at tcp:5037
+could not read ok from ADB Server
+* failed to start daemon
+error: cannot connect to daemon
+
+Thu Aug 15 2024 23:02:35 GMT+0530 (India Standard Time) FAIL: Error listing devices: Command failed: adb start-server
+* daemon not running; starting now at tcp:5037
+could not read ok from ADB Server
+* failed to start daemon
+error: cannot connect to daemon
+
+Thu Aug 15 2024 23:02:35 GMT+0530 (India Standard Time) FAIL: Error listing devices: Command failed: adb start-server
+* daemon not running; starting now at tcp:5037
+could not read ok from ADB Server
+* failed to start daemon
+error: cannot connect to daemon
+
+Thu Aug 15 2024 23:02:35 GMT+0530 (India Standard Time) FAIL: Error listing devices: Command failed: adb start-server
+* daemon not running; starting now at tcp:5037
+could not read ok from ADB Server
+* failed to start daemon
+error: cannot connect to daemon
+
+Thu Aug 15 2024 23:02:35 GMT+0530 (India Standard Time) FAIL: Error: Command failed: adb start-server
+* daemon not running; starting now at tcp:5037
+could not read ok from ADB Server
+* failed to start daemon
+error: cannot connect to daemon
+
+Thu Aug 15 2024 23:03:15 GMT+0530 (India Standard Time) FAIL: No Device Connected
+Thu Aug 15 2024 23:03:15 GMT+0530 (India Standard Time) FAIL: No device connected
+Thu Aug 15 2024 23:03:15 GMT+0530 (India Standard Time) FAIL: No devices connected
+Thu Aug 15 2024 23:03:15 GMT+0530 (India Standard Time) FAIL: Error: No devices connected
+Thu Aug 15 2024 23:03:15 GMT+0530 (India Standard Time) FAIL: No device connected
+Thu Aug 15 2024 23:03:15 GMT+0530 (India Standard Time) FAIL: No devices connected
+Thu Aug 15 2024 23:07:46 GMT+0530 (India Standard Time) FAIL: No devices connected
+Thu Aug 15 2024 23:07:46 GMT+0530 (India Standard Time) FAIL: No Device Connected
+Thu Aug 15 2024 23:07:46 GMT+0530 (India Standard Time) FAIL: No device connected
+Thu Aug 15 2024 23:07:46 GMT+0530 (India Standard Time) FAIL: Error: No devices connected
+Thu Aug 15 2024 23:07:46 GMT+0530 (India Standard Time) FAIL: No device connected
+Thu Aug 15 2024 23:07:46 GMT+0530 (India Standard Time) FAIL: No devices connected
+Thu Aug 15 2024 23:07:46 GMT+0530 (India Standard Time) FAIL: No devices connected
+Thu Aug 15 2024 23:07:46 GMT+0530 (India Standard Time) FAIL: No Device Connected
+Thu Aug 15 2024 23:07:46 GMT+0530 (India Standard Time) FAIL: No device connected
+Thu Aug 15 2024 23:07:46 GMT+0530 (India Standard Time) FAIL: Error: No devices connected
+Thu Aug 15 2024 23:07:46 GMT+0530 (India Standard Time) FAIL: No device connected
+Thu Aug 15 2024 23:07:46 GMT+0530 (India Standard Time) FAIL: No devices connected
+Thu Aug 15 2024 23:38:58 GMT+0530 (India Standard Time) FAIL: Error listing devices: No devices connected
+Thu Aug 15 2024 23:38:58 GMT+0530 (India Standard Time) FAIL: Error getting device properties: No devices connected
+Thu Aug 15 2024 23:38:58 GMT+0530 (India Standard Time) FAIL: Failed to install APK: No devices connected
+Thu Aug 15 2024 23:38:58 GMT+0530 (India Standard Time) FAIL: Failed to fetch installed packages: No devices connected
+Thu Aug 15 2024 23:38:58 GMT+0530 (India Standard Time) FAIL: Failed to take screenshot: No devices connected
+Thu Aug 15 2024 23:38:58 GMT+0530 (India Standard Time) FAIL: Failed to send text to device: No devices connected
+Thu Aug 15 2024 23:38:58 GMT+0530 (India Standard Time) FAIL: Failed to scroll down on device: No devices connected
+Thu Aug 15 2024 23:38:58 GMT+0530 (India Standard Time) SUMMARY: PASSED -> 0, FAILED -> 7
+Thu Aug 15 2024 23:39:56 GMT+0530 (India Standard Time) FAIL: Error listing devices: No devices connected
+Thu Aug 15 2024 23:39:56 GMT+0530 (India Standard Time) FAIL: Error getting device properties: No devices connected
+Thu Aug 15 2024 23:39:56 GMT+0530 (India Standard Time) FAIL: Failed to install APK: No devices connected
+Thu Aug 15 2024 23:39:56 GMT+0530 (India Standard Time) FAIL: Failed to fetch installed packages: No devices connected
+Thu Aug 15 2024 23:39:56 GMT+0530 (India Standard Time) FAIL: Failed to take screenshot: No devices connected
+Thu Aug 15 2024 23:39:56 GMT+0530 (India Standard Time) FAIL: Failed to send text to device: No devices connected
+Thu Aug 15 2024 23:39:56 GMT+0530 (India Standard Time) FAIL: Failed to scroll down on device: No devices connected
+Thu Aug 15 2024 23:39:56 GMT+0530 (India Standard Time) SUMMARY: PASSED -> 0, FAILED -> 7
+Thu Aug 15 2024 23:43:31 GMT+0530 (India Standard Time) FAIL: Error listing devices: No devices connected
+Thu Aug 15 2024 23:43:31 GMT+0530 (India Standard Time) FAIL: Error getting device properties: No devices connected
+Thu Aug 15 2024 23:43:31 GMT+0530 (India Standard Time) FAIL: Failed to install APK: No devices connected
+Thu Aug 15 2024 23:43:31 GMT+0530 (India Standard Time) FAIL: Failed to fetch installed packages: No devices connected
+Thu Aug 15 2024 23:43:31 GMT+0530 (India Standard Time) FAIL: Failed to take screenshot: No devices connected
+Thu Aug 15 2024 23:43:31 GMT+0530 (India Standard Time) FAIL: Failed to send text to device: No devices connected
+Thu Aug 15 2024 23:43:31 GMT+0530 (India Standard Time) FAIL: Failed to scroll down on device: No devices connected
+Thu Aug 15 2024 23:43:31 GMT+0530 (India Standard Time) SUMMARY: PASSED -> 0, FAILED -> 7
+Thu Aug 15 2024 23:46:17 GMT+0530 (India Standard Time) FAIL: Error listing devices: No devices connected
+Thu Aug 15 2024 23:46:17 GMT+0530 (India Standard Time) FAIL: Error getting device properties: No devices connected
+Thu Aug 15 2024 23:46:17 GMT+0530 (India Standard Time) FAIL: Failed to install APK: No devices connected
+Thu Aug 15 2024 23:46:17 GMT+0530 (India Standard Time) FAIL: Failed to fetch installed packages: No devices connected
+Thu Aug 15 2024 23:46:17 GMT+0530 (India Standard Time) FAIL: Failed to take screenshot: No devices connected
+Thu Aug 15 2024 23:46:17 GMT+0530 (India Standard Time) FAIL: Failed to send text to device: No devices connected
+Thu Aug 15 2024 23:46:17 GMT+0530 (India Standard Time) FAIL: Failed to scroll down on device: No devices connected
+Thu Aug 15 2024 23:46:18 GMT+0530 (India Standard Time) FAIL: Error listing devices: No devices connected
+Thu Aug 15 2024 23:46:18 GMT+0530 (India Standard Time) FAIL: Error getting device properties: No devices connected
+Thu Aug 15 2024 23:46:18 GMT+0530 (India Standard Time) FAIL: Failed to install APK: No devices connected
+Thu Aug 15 2024 23:46:18 GMT+0530 (India Standard Time) FAIL: Failed to fetch installed packages: No devices connected
+Thu Aug 15 2024 23:46:18 GMT+0530 (India Standard Time) FAIL: Failed to take screenshot: No devices connected
+Thu Aug 15 2024 23:46:18 GMT+0530 (India Standard Time) FAIL: Failed to send text to device: No devices connected
+Thu Aug 15 2024 23:46:18 GMT+0530 (India Standard Time) FAIL: Failed to scroll down on device: No devices connected
+Fri Aug 16 2024 00:05:19 GMT+0530 (India Standard Time) FAIL: Scroll down action failed on device BAYHQOH6SKKBVSNV: count is not defined
+Fri Aug 16 2024 00:05:19 GMT+0530 (India Standard Time) FAIL: Text not sent to device: count is not defined
+Fri Aug 16 2024 00:05:19 GMT+0530 (India Standard Time) PASS: {"model":"CPH2423","brand":"OnePlus","androidVersion":"14","sdkVersion":"34"}
+Fri Aug 16 2024 00:05:19 GMT+0530 (India Standard Time) FAIL: Error getting properties: count is not defined
+Fri Aug 16 2024 00:05:19 GMT+0530 (India Standard Time) FAIL: Could not fetch packages from device BAYHQOH6SKKBVSNV: count is not defined
+Fri Aug 16 2024 00:06:15 GMT+0530 (India Standard Time) FAIL: Scroll down action failed on device BAYHQOH6SKKBVSNV: count is not defined
+Fri Aug 16 2024 00:06:15 GMT+0530 (India Standard Time) FAIL: Text not sent to device: count is not defined
+Fri Aug 16 2024 00:06:15 GMT+0530 (India Standard Time) PASS: {"model":"CPH2423","brand":"OnePlus","androidVersion":"14","sdkVersion":"34"}
+Fri Aug 16 2024 00:06:15 GMT+0530 (India Standard Time) FAIL: Error getting properties: count is not defined
+Fri Aug 16 2024 00:06:15 GMT+0530 (India Standard Time) FAIL: Could not fetch packages from device BAYHQOH6SKKBVSNV: count is not defined
+Fri Aug 16 2024 00:12:00 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:12:00 GMT+0530 (India Standard Time) PASS: {"model":"CPH2423","brand":"OnePlus","androidVersion":"14","sdkVersion":"34"}
+Fri Aug 16 2024 00:12:03 GMT+0530 (India Standard Time) PASS: App successfully installed on BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:12:03 GMT+0530 (India Standard Time) PASS: Installed packages on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:12:03 GMT+0530 (India Standard Time) PASS: Text "Hello World" sent to device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:12:03 GMT+0530 (India Standard Time) PASS: Scroll down action performed on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:12:04 GMT+0530 (India Standard Time) PASS: Screenshot successfully taken on BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:18:47 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:18:47 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:18:47 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\app.apk'
+Fri Aug 16 2024 00:18:47 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:18:47 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
+Fri Aug 16 2024 00:18:47 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:18:48 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:20:05 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:20:05 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:20:05 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\app.apk'
+Fri Aug 16 2024 00:20:05 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:20:05 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
+Fri Aug 16 2024 00:20:05 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:20:06 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:22:13 GMT+0530 (India Standard Time) PASS: Devices listed successfully
+Fri Aug 16 2024 00:22:13 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully
+Fri Aug 16 2024 00:22:13 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\app.apk'
+Fri Aug 16 2024 00:22:13 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:22:14 GMT+0530 (India Standard Time) PASS: Text sent to device successfully
+Fri Aug 16 2024 00:22:14 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 00:22:14 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
