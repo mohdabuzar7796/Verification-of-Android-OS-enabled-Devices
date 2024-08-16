@@ -370,7 +370,7 @@ async function Home() {
 async function Back() {
   try {
     const devices = await client.listDevices();
-    for (device of devices) {
+    for (const device of devices) {
       await client.shell(device.id, "input keyevent 4");
       passed++;
     }
@@ -380,6 +380,52 @@ async function Back() {
     failed++;
   }
 }
+async function Contact() {
+  try {
+    const devices = await client.listDevices();
+    for (const device of devices) {
+      await client.shell(device.id, "input keyevent 207");
+      passed++;
+    }
+  } catch (error) {
+    console.error("Error:", err.message);
+    log(Date() + " FAIL: Error: " + err.message);
+    failed++;
+  }
+}
+app.get("/Contact", async (req, res) => {
+  try {
+    await Contact();
+    res.status(200).redirect("/");
+  } catch (error) {
+    res
+      .status(500)
+      .send("An error occurred while sending devices to the Contact screen.");
+  }
+});
+async function Search() {
+  try {
+    const devices = await client.listDevices();
+    for (const device of devices) {
+      await client.shell(device.id, "input keyevent 84");
+      passed++;
+    }
+  } catch (error) {
+    console.error("Error:", err.message);
+    log(Date() + " FAIL: Error: " + err.message);
+    failed++;
+  }
+}
+app.get("/Search", async (req, res) => {
+  try {
+    await Search();
+    res.status(200).redirect("/");
+  } catch (error) {
+    res
+      .status(500)
+      .send("An error occurred while sending devices to the Search screen.");
+  }
+});
 
 app.get("/Back", async (req, res) => {
   try {
