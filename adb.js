@@ -3,8 +3,6 @@ const client = adb.createClient();
 const fs = require("fs");
 const path = require("path");
 
-
-
 const apkPath = path.resolve(
   __dirname,
   "C:\\Users\\HP\\Downloads\\APKPure_v3.20.16_apkpure.com.apk"
@@ -98,7 +96,13 @@ client
             `Failed to install ${apkPath} on device ${device.id}:`,
             err.message
           );
-          log(Date() + " FAIL: App not installed on device " + device.id + ": " + err.message);
+          log(
+            Date() +
+              " FAIL: App not installed on device " +
+              device.id +
+              ": " +
+              err.message
+          );
         });
     });
   })
@@ -134,7 +138,13 @@ client
             `Failed to get packages from device ${device.id}:`,
             err.message
           );
-          log(Date() + " FAIL: Could not fetch packages from device " + device.id + ": " + err.message);
+          log(
+            Date() +
+              " FAIL: Could not fetch packages from device " +
+              device.id +
+              ": " +
+              err.message
+          );
         });
     });
   })
@@ -189,7 +199,7 @@ const sendTextToDevice = async (text) => {
     await client.shell(deviceId, `input text "${encodedText}"`);
     console.log(`Text "${text}" sent to device.`);
     count++;
-    log(Date() + " PASS: Text \"" + text + "\" sent to device " + deviceId);
+    log(Date() + ' PASS: Text "' + text + '" sent to device ' + deviceId);
   } catch (err) {
     console.error("An error occurred:", err.message);
     log(Date() + " FAIL: Text not sent to device: " + err.message);
@@ -215,7 +225,13 @@ async function scrollDown(deviceId) {
     log(Date() + " PASS: Scroll down action performed on device " + deviceId);
   } catch (err) {
     console.error("Error performing scroll action:", err.message);
-    log(Date() + " FAIL: Scroll down action failed on device " + deviceId + ": " + err.message);
+    log(
+      Date() +
+        " FAIL: Scroll down action failed on device " +
+        deviceId +
+        ": " +
+        err.message
+    );
   }
 }
 
@@ -232,6 +248,9 @@ client
     console.error("Error:", err.message);
     log(Date() + " FAIL: Error: " + err.message);
   });
+
+
+
 
 // Summary of test cases
 // async function TestCases() {

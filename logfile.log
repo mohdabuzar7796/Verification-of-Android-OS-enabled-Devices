@@ -1,28 +1,42 @@
-Fri Aug 16 2024 23:10:16 GMT+0530 (India Standard Time) PASS: Device BAYHQOH6SKKBVSNV listed successfully
-Fri Aug 16 2024 23:10:16 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully for device BAYHQOH6SKKBVSNV
-Fri Aug 16 2024 23:10:16 GMT+0530 (India Standard Time) FAIL: Failed to install APK: ENOENT: no such file or directory, open 'C:\Users\HP\OneDrive\Desktop\Verification of Android OS-enabled Devices\C:\Users\HP\Downloads\APKPure_v3.20.16_apkpure.com.apk'
-Fri Aug 16 2024 23:10:16 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
-Fri Aug 16 2024 23:10:16 GMT+0530 (India Standard Time) PASS: Text sent to device BAYHQOH6SKKBVSNV successfully
-Fri Aug 16 2024 23:10:16 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
-Fri Aug 16 2024 23:10:17 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
-Fri Aug 16 2024 23:15:08 GMT+0530 (India Standard Time) PASS: Device BAYHQOH6SKKBVSNV listed successfully
-Fri Aug 16 2024 23:15:08 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully for device BAYHQOH6SKKBVSNV
-Fri Aug 16 2024 23:15:11 GMT+0530 (India Standard Time) PASS: APK installed successfully on device BAYHQOH6SKKBVSNV
-Fri Aug 16 2024 23:15:11 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
-Fri Aug 16 2024 23:15:11 GMT+0530 (India Standard Time) PASS: Text sent to device BAYHQOH6SKKBVSNV successfully
-Fri Aug 16 2024 23:15:11 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
-Fri Aug 16 2024 23:15:13 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
-Fri Aug 16 2024 23:15:34 GMT+0530 (India Standard Time) FAIL: Error listing devices: No devices connected
-Fri Aug 16 2024 23:15:34 GMT+0530 (India Standard Time) FAIL: Error getting device properties: No devices connected
-Fri Aug 16 2024 23:15:34 GMT+0530 (India Standard Time) FAIL: Failed to install APK: No devices connected
-Fri Aug 16 2024 23:15:34 GMT+0530 (India Standard Time) FAIL: Failed to fetch installed packages: No devices connected
-Fri Aug 16 2024 23:15:34 GMT+0530 (India Standard Time) FAIL: Failed to take screenshot: No devices connected
-Fri Aug 16 2024 23:15:34 GMT+0530 (India Standard Time) FAIL: Failed to send text to device: No devices connected
-Fri Aug 16 2024 23:15:34 GMT+0530 (India Standard Time) FAIL: Failed to scroll down on device: No devices connected
-Fri Aug 16 2024 23:15:42 GMT+0530 (India Standard Time) PASS: Device BAYHQOH6SKKBVSNV listed successfully
-Fri Aug 16 2024 23:15:42 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully for device BAYHQOH6SKKBVSNV
-Fri Aug 16 2024 23:15:45 GMT+0530 (India Standard Time) PASS: APK installed successfully on device BAYHQOH6SKKBVSNV
-Fri Aug 16 2024 23:15:46 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
-Fri Aug 16 2024 23:15:46 GMT+0530 (India Standard Time) PASS: Text sent to device BAYHQOH6SKKBVSNV successfully
-Fri Aug 16 2024 23:15:46 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
-Fri Aug 16 2024 23:15:48 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:37:40 GMT+0530 (India Standard Time) PASS: Device BAYHQOH6SKKBVSNV listed successfully
+Fri Aug 16 2024 23:37:40 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:37:43 GMT+0530 (India Standard Time) PASS: APK installed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:37:43 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:37:45 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:37:45 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:37:45 GMT+0530 (India Standard Time) PASS: Text sent to device BAYHQOH6SKKBVSNV successfully
+Fri Aug 16 2024 23:37:45 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:38:00 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:38:07 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:38:08 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:38:08 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:38:09 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:38:09 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:38:09 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:38:09 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:38:09 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:38:10 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:38:54 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:39:13 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:39:16 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:39:23 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:39:25 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:39:58 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:40:18 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:41:21 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:47:48 GMT+0530 (India Standard Time) FAIL: Error: devices is not iterable
+Fri Aug 16 2024 23:51:22 GMT+0530 (India Standard Time) FAIL: Error: devices is not iterable
+Fri Aug 16 2024 23:57:40 GMT+0530 (India Standard Time) PASS: Device BAYHQOH6SKKBVSNV listed successfully
+Fri Aug 16 2024 23:57:40 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:57:43 GMT+0530 (India Standard Time) PASS: APK installed successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:57:44 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:57:46 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Fri Aug 16 2024 23:57:46 GMT+0530 (India Standard Time) PASS: Text sent to device BAYHQOH6SKKBVSNV successfully
+Fri Aug 16 2024 23:57:46 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV
+Sat Aug 17 2024 00:13:01 GMT+0530 (India Standard Time) PASS: Device BAYHQOH6SKKBVSNV listed successfully
+Sat Aug 17 2024 00:13:01 GMT+0530 (India Standard Time) PASS: Device properties fetched successfully for device BAYHQOH6SKKBVSNV
+Sat Aug 17 2024 00:13:04 GMT+0530 (India Standard Time) PASS: APK installed successfully on device BAYHQOH6SKKBVSNV
+Sat Aug 17 2024 00:13:04 GMT+0530 (India Standard Time) PASS: Installed packages fetched successfully for device BAYHQOH6SKKBVSNV
+Sat Aug 17 2024 00:13:06 GMT+0530 (India Standard Time) PASS: Screenshot taken successfully on device BAYHQOH6SKKBVSNV
+Sat Aug 17 2024 00:13:06 GMT+0530 (India Standard Time) PASS: Text sent to device BAYHQOH6SKKBVSNV successfully
+Sat Aug 17 2024 00:13:06 GMT+0530 (India Standard Time) PASS: Scroll down action performed successfully on device BAYHQOH6SKKBVSNV

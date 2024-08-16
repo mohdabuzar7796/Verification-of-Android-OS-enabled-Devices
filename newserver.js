@@ -6,6 +6,7 @@ const client = adbkit.createClient();
 const app = express();
 const port = 9000;
 const config = require("./config.json");
+const { trace } = require("console");
 
 // Array to store test results
 const testResults = [];
@@ -178,28 +179,44 @@ async function testTakeScreenshot() {
       throw new Error("No devices connected");
     }
 
+    // Loop through each device and take a screenshot
     for (const device of devices) {
       const screenshot = await client.shell(device.id, "screencap -p");
       const chunks = [];
 
       screenshot.on("data", (chunk) => chunks.push(chunk));
-      screenshot.on("end", () => {
-        const buffer = Buffer.concat(chunks);
-        const screenshotPath = path.join(
-          __dirname,
-          `screenshot_${device.id}.png`
-        );
-        fs.writeFileSync(screenshotPath, buffer);
-        console.log(`Screenshot saved as screenshot_${device.id}.png`);
-        passed++;
-        testResults.push({
-          name: "Take Screenshot",
-          status: "passed",
-          message: `Screenshot taken successfully on device ${device.id}`,
+
+      // Wait for the 'end' event using a Promise
+      await new Promise((resolve, reject) => {
+        screenshot.on("end", () => {
+          try {
+            const buffer = Buffer.concat(chunks);
+            const screenshotPath = path.join(
+              __dirname,
+              `screenshot_${device.id}.png`
+            );
+            fs.writeFileSync(screenshotPath, buffer);
+            console.log(`Screenshot saved as screenshot_${device.id}.png`);
+            passed++;
+            testResults.push({
+              name: "Take Screenshot",
+              status: "passed",
+              message: `Screenshot taken successfully on device ${device.id}`,
+            });
+            log(
+              `${Date()} PASS: Screenshot taken successfully on device ${
+                device.id
+              }`
+            );
+            resolve();
+          } catch (err) {
+            reject(err);
+          }
         });
-        log(
-          `${Date()} PASS: Screenshot taken successfully on device ${device.id}`
-        );
+
+        screenshot.on("error", (err) => {
+          reject(err);
+        });
       });
     }
   } catch (err) {
@@ -213,6 +230,7 @@ async function testTakeScreenshot() {
     log(`${Date()} FAIL: Failed to take screenshot: ${err.message}`);
   }
 }
+
 async function testSendTextToDevice(text) {
   try {
     const devices = await client.listDevices();
@@ -301,6 +319,7 @@ async function runTestCases() {
   await testTakeScreenshot();
   await testSendTextToDevice(config.text);
   await testScrollDown();
+  await Home();
 }
 
 // Route to display test results
@@ -313,6 +332,64 @@ app.get("/results", async (req, res) => {
     failed,
     testResults,
   });
+});
+
+// async function Home() {
+//   try {
+//     await client.shell(device.id, "adb shell input keyevent 3");
+//   } catch (err) {
+//     console.error("Error:", err.message);
+//     log(Date() + " FAIL: Error: " + err.message);
+//   }
+// }
+
+app.get("/GoHome", async (req, res) => {
+  try {
+    await Home();
+    res.status(200).redirect("/");
+  } catch (err) {
+    res
+      .status(500)
+      .send("An error occurred while sending devices to the home screen.");
+  }
+});
+
+async function Home() {
+  try {
+    const devices = await client.listDevices(); // Added await here
+    for (const device of devices) {
+      await client.shell(device.id, "input keyevent 3"); // Remove the additional "adb shell"
+      passed++;
+    }
+  } catch (err) {
+    console.error("Error:", err.message);
+    log(Date() + " FAIL: Error: " + err.message);
+    failed++;
+  }
+}
+async function Back() {
+  try {
+    const devices = await client.listDevices();
+    for (device of devices) {
+      await client.shell(device.id, "input keyevent 4");
+      passed++;
+    }
+  } catch (error) {
+    console.error("Error:", err.message);
+    log(Date() + " FAIL: Error: " + err.message);
+    failed++;
+  }
+}
+
+app.get("/Back", async (req, res) => {
+  try {
+    await Back();
+    res.status(200).redirect("/");
+  } catch (error) {
+    res
+      .status(500)
+      .send("An error occurred while sending devices to the home screen.");
+  }
 });
 
 app.get("/", async (req, res) => {
