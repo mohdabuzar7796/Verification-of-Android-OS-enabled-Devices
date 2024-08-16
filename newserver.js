@@ -5,6 +5,7 @@ const adbkit = require("adbkit");
 const client = adbkit.createClient();
 const app = express();
 const port = 9000;
+const config = require("./config.json");
 
 // Array to store test results
 const testResults = [];
@@ -112,7 +113,8 @@ async function testInstallAPK() {
     for (const device of devices) {
       await client.install(
         device.id,
-        path.join(__dirname, "APKPure_v3.20.16_apkpure.com.apk") // Corrected path
+        // path.join(__dirname, config.apkPath) // Corrected path
+        config.apkPath
       );
       console.log(`Successfully installed APK on device ${device.id}`);
       passed++;
@@ -211,7 +213,6 @@ async function testTakeScreenshot() {
     log(`${Date()} FAIL: Failed to take screenshot: ${err.message}`);
   }
 }
-
 async function testSendTextToDevice(text) {
   try {
     const devices = await client.listDevices();
@@ -298,7 +299,7 @@ async function runTestCases() {
   await testInstallAPK();
   await testFetchInstalledPackages();
   await testTakeScreenshot();
-  await testSendTextToDevice("Hello, World!");
+  await testSendTextToDevice(config.text);
   await testScrollDown();
 }
 
@@ -347,8 +348,8 @@ app.get("/run-test/:testName", async (req, res) => {
     "Get Device Properties": testGetDeviceProperties,
     "Install APK": testInstallAPK,
     "Fetch Installed Packages": testFetchInstalledPackages,
-    Screenshot: testTakeScreenshot,
-    "Send-Text-to-Device": () => testSendTextToDevice("Hello, World!"),
+    "Take Screenshot": testTakeScreenshot,
+    "Send Text to Device": () => testSendTextToDevice("Hello, World!"),
     "Scroll Down": testScrollDown,
   };
 

@@ -16,6 +16,17 @@
         font-size: 16px;
         margin: 5px;
       }
+      #input {
+        height: 35px;
+        font-size: 18px;
+        font-family: "Times New Roman", Times, serif;
+      }
+      #form {
+        height: max-content;
+        width: max-content;
+        padding: 15px;
+        background-color: #04aa6d;
+      }
       .device-list,
       .test-case-list {
         margin-bottom: 20px;
@@ -51,6 +62,12 @@
         <button class="button"><%= testCase %></button>
       </form>
       <% }); %>
+      <form id="form" action="/text" method="get">
+        <input id="input" type="text" />
+        <button class="button" style="background-color: black">
+          Send Text
+        </button>
+      </form>
     </div>
   </body>
 </html>
