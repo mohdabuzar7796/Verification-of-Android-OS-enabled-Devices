@@ -25,6 +25,7 @@
   "dependencies": {
     "@wdio/cli": "^8.40.2",
     "adbkit": "^2.11.1",
+    "bluebird": "^3.7.2",
     "chai": "^5.1.1",
     "chart.js": "^4.4.3",
     "ejs": "^3.1.10",

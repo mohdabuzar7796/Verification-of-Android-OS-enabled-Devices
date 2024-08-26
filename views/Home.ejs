@@ -1,81 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <style>
-      .button {
-        background-color: #04aa6d; /* Green */
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 5px;
-      }
-      #input {
-        height: 35px;
-        font-size: 18px;
-        font-family: "Times New Roman", Times, serif;
-      }
-      #form {
-        height: max-content;
-        width: max-content;
-        padding: 15px;
-        background-color: #04aa6d;
-      }
-      .device-list,
-      .test-case-list {
-        margin-bottom: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Connected Devices</h1>
-    <div class="device-list">
-      <% if (devices.length === 0) { %>
-      <p>No devices connected.</p>
-      <% } else { %>
-      <ul>
-        <% devices.forEach(device => { %>
-        <li><%= device.id %></li>
-        <% }); %>
-      </ul>
-      <% } %>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #f4f4f4, #e0e0e0);
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
 
-    <h1>Test Cases</h1>
-    <div class="test-case-list">
-      <form action="/results" method="get">
-        <button class="button">Run All Test Cases</button>
-      </form>
+    h1 {
+      text-align: center;
+      color: #333;
+      font-size: 3rem;
+      margin-bottom: 30px;
+      position: relative;
+      font-weight: bold;
+    }
 
+    h1::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background-color: #04aa6d;
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .device-list,
+    .test-case-list {
+      margin-bottom: 20px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .device-list:hover,
+    .test-case-list:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      padding: 12px;
+      font-size: 18px;
+      border-bottom: 1px solid #ddd;
+      transition: background-color 0.3s ease;
+    }
+
+    li:hover {
+      background-color: #f0f0f0;
+    }
+
+    .button {
+      background-color: #04aa6d;
+      border: none;
+      color: white;
+      padding: 16px 36px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 18px;
+      margin: 8px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #038e5b;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    #input {
+      height: 40px;
+      font-size: 18px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      padding: 8px 12px;
+      margin-right: 12px;
+    }
+
+    #form {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #04aa6d;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 20px;
+    }
+
+    #form:hover {
+      background-color: #038e5b;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-buttons a {
+      margin: 8px;
+      text-decoration: none;
+    }
+
+    .nav-buttons form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin: 10px;
+      width: calc(50% - 20px); /* Adjust width for responsive design */
+    }
+
+    .nav-buttons form:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-buttons label {
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    .nav-buttons input[type="text"],
+    .nav-buttons input[type="password"] {
+      height: 40px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      padding: 8px 12px;
+      margin-bottom: 12px;
+      width: 100%;
+    }
+
+    .nav-buttons button[type="submit"] {
+      background-color: #04aa6d;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .nav-buttons button[type="submit"]:hover {
+      background-color: #038e5b;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .nav-buttons form {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Connected Devices</h1>
+  <div class="device-list">
+    <% if (devices.length === 0) { %>
+    <p>No devices connected.</p>
+    <% } else { %>
+    <ul>
+      <% devices.forEach(device => { %>
+      <li><%= device.id %></li>
+      <% }); %>
+    </ul>
+    <% } %>
+  </div>
+
+  <h1>Test Cases</h1>
+  <div class="test-case-list">
+    <form action="/results" method="get">
+      <button class="button">Run All Test Cases</button>
+    </form>
+
+    <div class="nav-buttons">
       <% testCases.forEach(testCase => { %>
-      <form
-        action="/run-test/<%= testCase %>"
-        method="get"
-        style="display: inline"
-      >
+      <form action="/run-test/<%= testCase %>" method="get">
         <button class="button"><%= testCase %></button>
       </form>
       <% }); %>
-      <form id="form" action="/text" method="get">
-        <input id="input" type="text" />
-        <button class="button" style="background-color: black">
-          Send Text
-        </button>
-      </form>
+    </div>
+
+    <form id="form" action="/sendText" method="post">
+      <input id="input" type="text" name="text" placeholder="Enter text" />
+      <button class="button" style="background-color: black">
+        Send Text
+      </button>
+    </form>
+
+    <div class="nav-buttons">
       <a href="/GoHome" class="button" style="background-color: orange">Home</a>
       <a href="/Back" class="button" style="background-color: orange">Back</a>
-      <a href="/Contact" class="button" style="background-color: orange"
-        >Contact</a
-      >
-      <a href="/Search" class="button" style="background-color: orange"
-        >Search</a
-      >
+      <a href="/Contact" class="button" style="background-color: orange">Contact</a>
+      <a href="/Search" class="button" style="background-color: orange">Search</a>
+      <!-- <a href="/Setting" class="button" style="background-color: orange">Setting</a> -->
+      <form action="/enable-wireless-debugging" method="post">
+        <label for="networkName">Network Name:</label>
+        <input type="text" id="networkName" name="networkName" required placeholder="Network Name" />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required placeholder="Password" />
+
+        <button type="submit">Enable Wireless Debugging</button>
+      </form>
     </div>
-  </body>
+  </div>
+</body>
 </html>

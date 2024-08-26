@@ -3,6 +3,8 @@ const path = require("path");
 const fs = require("fs");
 const adbkit = require("adbkit");
 const client = adbkit.createClient();
+const xlsx = require("xlsx");
+
 const app = express();
 const port = 9000;
 const config = require("./config.json");
@@ -63,6 +65,86 @@ async function testListDevices() {
     log(`${Date()} FAIL: Error listing devices: ${err.message}`);
   }
 }
+
+//Wifi Connexction
+async function enableWirelessDebugging(networkName, password) {
+  try {
+    // Get a list of connected devices
+    const devices = await client.listDevices();
+    if (devices.length === 0) {
+      throw new Error("No devices connected");
+    }
+
+    for (const device of devices) {
+      console.log(`Processing device: ${device.id}`);
+
+      // Connect the device to the specified Wi-Fi network
+      const connectCommand = `am broadcast -a android.intent.action.WIFI_STATE_CHANGED --ez state true --es extra_wifi_network_ssid "${networkName}" --es extra_wifi_network_password "${password}"`;
+      await client.shell(device.id, connectCommand);
+      console.log(`Sent Wi-Fi connect command to device ${device.id}`);
+
+      // Wait for the device to connect to the Wi-Fi network
+      await new Promise((resolve) => setTimeout(resolve, 10000)); // Increase if needed
+
+      // Enable wireless debugging on the device
+      await client.shell(device.id, "adb tcpip 5555");
+      console.log(`Enabled wireless debugging on device ${device.id}`);
+
+      // Optionally, retrieve the device's IP address
+      const ipCommand =
+        "ip -f inet addr show wlan0 | grep \"inet\" | awk '{print $2}' | cut -d/ -f1";
+      const ipResult = await client.shell(device.id, ipCommand);
+      const ip = await adbkit.util.readAll(ipResult).toString().trim();
+      console.log(`Device ${device.id} IP address: ${ip}`);
+
+      // Connect using the device's IP address
+      if (ip) {
+        await client.shell(device.id, `adb connect ${ip}:5555`);
+        console.log(`Connected to ${ip}:5555`);
+      } else {
+        throw new Error(
+          `Failed to retrieve IP address for device ${device.id}`
+        );
+      }
+
+      passed++;
+      testResults.push({
+        name: "Enable Wireless Debugging",
+        status: "passed",
+        message: `Wireless debugging enabled successfully on device ${device.id}`,
+      });
+      log(
+        `${Date()} PASS: Wireless debugging enabled successfully on device ${
+          device.id
+        }`
+      );
+    }
+  } catch (err) {
+    console.error("Failed to enable wireless debugging:", err.message);
+    failed++;
+    testResults.push({
+      name: "Enable Wireless Debugging",
+      status: "failed",
+      message: "Failed to enable wireless debugging: " + err.message,
+    });
+    log(`${Date()} FAIL: Failed to enable wireless debugging: ${err.message}`);
+  }
+}
+
+// Route to handle wireless debugging form submission
+app.post("/enable-wireless-debugging", async (req, res) => {
+  const { networkName, password } = req.body;
+
+  try {
+    await enableWirelessDebugging(networkName, password);
+    res.status(200).redirect("/"); // Redirect to home or status page after action
+  } catch (error) {
+    console.error(`Failed to enable wireless debugging: ${error.message}`);
+    res
+      .status(500)
+      .send(`Failed to enable wireless debugging: ${error.message}`);
+  }
+});
 
 async function testGetDeviceProperties() {
   try {
@@ -231,37 +313,6 @@ async function testTakeScreenshot() {
   }
 }
 
-async function testSendTextToDevice(text) {
-  try {
-    const devices = await client.listDevices();
-    if (devices.length === 0) {
-      throw new Error("No devices connected");
-    }
-
-    for (const device of devices) {
-      const encodedText = text.replace(/ /g, "%s");
-      await client.shell(device.id, `input text "${encodedText}"`);
-      console.log(`Text "${text}" sent to device ${device.id}.`);
-      passed++;
-      testResults.push({
-        name: "Send Text to Device",
-        status: "passed",
-        message: `Text sent to device ${device.id} successfully`,
-      });
-      log(`${Date()} PASS: Text sent to device ${device.id} successfully`);
-    }
-  } catch (err) {
-    console.error("Failed to send text to device:", err.message);
-    failed++;
-    testResults.push({
-      name: "Send Text to Device",
-      status: "failed",
-      message: "Failed to send text to device: " + err.message,
-    });
-    log(`${Date()} FAIL: Failed to send text to device: ${err.message}`);
-  }
-}
-
 async function testScrollDown() {
   try {
     const devices = await client.listDevices();
@@ -304,6 +355,42 @@ async function testScrollDown() {
     log(`${Date()} FAIL: Failed to scroll down on device: ${err.message}`);
   }
 }
+async function testSendTextToDevice(text) {
+  try {
+    const devices = await client.listDevices();
+    if (devices.length === 0) {
+      throw new Error("No devices connected");
+    }
+
+    for (const device of devices) {
+      const encodedText = text.replace(/ /g, "%s");
+      await client.shell(device.id, `input text "${encodedText}"`);
+      console.log(`Text "${text}" sent to device ${device.id}.`);
+      passed++;
+      testResults.push({
+        name: "Send Text to Device",
+        status: "passed",
+        message: `Text sent to device ${device.id} successfully`,
+      });
+      log(`${Date()} PASS: Text sent to device ${device.id} successfully`);
+    }
+  } catch (err) {
+    console.error("Failed to send text to device:", err.message);
+    failed++;
+    testResults.push({
+      name: "Send Text to Device",
+      status: "failed",
+      message: "Failed to send text to device: " + err.message,
+    });
+    log(`${Date()} FAIL: Failed to send text to device: ${err.message}`);
+  }
+}
+
+app.post("/sendText", async (req, res) => {
+  const { text } = req.body;
+  await testSendTextToDevice(text);
+  res.status(200).redirect("/");
+});
 
 async function runTestCases() {
   // Reset counters and results
@@ -317,7 +404,7 @@ async function runTestCases() {
   await testInstallAPK();
   await testFetchInstalledPackages();
   await testTakeScreenshot();
-  await testSendTextToDevice(config.text);
+  // await testSendTextToDevice(config.text);
   await testScrollDown();
   await Home();
 }
@@ -416,6 +503,71 @@ async function Search() {
     failed++;
   }
 }
+async function Setting() {
+  try {
+    const devices = await client.listDevices();
+    for (const device of devices) {
+      await client.shell(device.id, "input keyevent 280");
+      passed++;
+    }
+  } catch (error) {
+    console.error("Error:", err.message);
+    log(Date() + " FAIL: Error: " + err.message);
+    failed++;
+  }
+}
+app.post("/mobile-data", async (req, res) => {
+  const { enable } = req.body;
+  const deviceId = await listDevices();
+
+  try {
+    if (!deviceId) {
+      throw new Error("Device ID is required");
+    }
+
+    await setMobileData(deviceId, enable === "true");
+    console.log(
+      `Mobile data ${
+        enable === "true" ? "enabled" : "disabled"
+      } for device ${deviceId}.`
+    );
+
+    // Log success
+    log(
+      `${new Date().toISOString()} PASS: Mobile data ${
+        enable === "true" ? "enabled" : "disabled"
+      } for device ${deviceId}.`
+    );
+
+    res.redirect("/"); // Redirect to the home or status page after action
+  } catch (error) {
+    console.error(
+      `Failed to ${enable === "true" ? "enable" : "disable"} mobile data: ${
+        error.message
+      }`
+    );
+
+    // Log failure
+    log(
+      `${new Date().toISOString()} FAIL: Failed to ${
+        enable === "true" ? "enable" : "disable"
+      } mobile data for device ${deviceId}: ${error.message}`
+    );
+
+    res
+      .status(500)
+      .send(
+        `Failed to ${enable === "true" ? "enable" : "disable"} mobile data: ${
+          error.message
+        }`
+      );
+  }
+});
+app.post("/text", async (req, res) => {
+  const { text } = req.body;
+  await testSendTextToDevice(text);
+  res.status(200).redirect("/");
+});
 app.get("/Search", async (req, res) => {
   try {
     await Search();
@@ -426,7 +578,16 @@ app.get("/Search", async (req, res) => {
       .send("An error occurred while sending devices to the Search screen.");
   }
 });
-
+app.get("/Setting", async (req, res) => {
+  try {
+    await Setting();
+    res.status(200).redirect("/");
+  } catch (error) {
+    res
+      .status(500)
+      .send("An error occurred while sending devices to the Search screen.");
+  }
+});
 app.get("/Back", async (req, res) => {
   try {
     await Back();
@@ -500,7 +661,15 @@ app.get("/run-test/:testName", async (req, res) => {
 //     res.status(500).send("Error running all test cases.");
 //   }
 // });
-
+module.exports = {
+  testListDevices,
+  enableWirelessDebugging,
+  testGetDeviceProperties,
+  testInstallAPK,
+  testFetchInstalledPackages,
+  testTakeScreenshot,
+  testScrollDown,
+};
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
